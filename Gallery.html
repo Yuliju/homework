@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js">
+        </script>
+        <script type="text/javascript" src="jquery.cross-slide.js">
+        </script>
+        <script type="text/javascript">
+            $(function () {
+                $('#test1').crossSlide({
+                    sleep: 2,
+                    fade: 3
+                }, [
+                    { src: "img/01.jpg" },
+                    { src: "img/02.jpg" },
+                    { src: "img/03.jpg" },
+                    { src: "img/04.jpg" }
+                ]);
+            });
+        </script>
+        <style type="text/css">
+            #test1 {
+                margin: 1em auto;
+                border: 2px solid #6699CC;
+                width: 380px;
+                height: 360px;
+            }
+        </style>
+    </head>
+    <body>
+        <div align="center" id="test1">
+            Если изображения не видно, обновите страницу
+        </div>
+
+    </body>
+</html>

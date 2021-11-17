@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" type="text/css" href="style.css">
+    <title>Форма</title>
+</head>
+
+<body>
+    <aside>
+        <!-- Боковая панель (сайдбар) -->
+        <figure>
+            <img src="img/advertising1.bmp" title="Реклама" alt="Реклама">
+            <img src="img/advertising2.bmp" title="Реклама" alt="Реклама">
+            <img src="img/advertising1.bmp" title="Реклама" alt="Реклама">
+            <img src="img/advertising2.bmp" title="Реклама" alt="Реклама">
+        </figure>
+    </aside>
+
+    <ul class="menu-main">
+        <li><a href="index.html" class="current">Главная</a></li>
+        <li><a href="forNew.html">Для новичков</a></li>
+        <li><a href="errors.html">Ошибки</a></li>
+        <li><a href="Lists.html">Полезные материалы</a></li>
+        <li><a href="formInvestor.html">Анкета инвестора</a></li>
+    </ul>
+    <hr>
+    <form action="">
+        <table border="1" cellpadding="5" style="margin: auto;">
+            <caption align="left" style="padding-bottom: 20px;">
+                <b> Анкета инвестора </b>
+            </caption>
+            <tr>
+                <td>Имя</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Фамилия</td>
+                <td><input type="text" name="sname" id="sname"></td>
+            </tr>
+            <tr>
+                <td>Опыт инвестирования</td>
+                <td>
+                    <input type="radio" name="skills" id="g1" value="есть опыт! :)">
+                    <label for="g1">Есть</label>
+                    <input type="radio" name="skills" id="g2" value="нет опыта (:">
+                    <label for="g2">Нет</label>
+                </td>
+            </tr>
+            <tr>
+                <td>С какого года инвестируете?</td>
+                <td>
+                    <select name="year" size="1" id="select">
+                        <option value="21" selected>2021</option>
+                        <option value="20">2020</option>
+                        <option value="19">2019</option>
+                        <option value="18">2018</option>
+                        <option value="17">2017</option>
+                        <option value="16">2016</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Знание языков</td>
+                <td>
+                    <input type="checkbox" class="checkbox" name="languadg" value=" Русский" id="Ru" checked>Русский<br>
+                    <input type="checkbox" class="checkbox" name="languadg" value=" Английский" id="Eng">Английский<br>
+                    <input type="checkbox" class="checkbox" name="languadg" value=" lkjdgfiudg" id="lkjdgfiudg"
+                        checked>lkjdgfiudg<br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="description" id="Zach" cols="40"
+                        rows="10">Расскажите о своих винансовых целях! </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="Nado()">Далее</button>
+                    <button type="reset">Отмена</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="Hi" style="margin: auto;"></div>
+    <script type="text/javascript">
+        function Nado() {
+            function getCheckedCheckBoxes() {
+                var a = " ";
+                var checkboxes = document.getElementsByClassName('checkbox');
+                for (var index = 0; index < checkboxes.length; index++) {
+                    if (checkboxes[index].checked) {
+                        a = a + checkboxes[index].value + "; ";
+
+                    }
+                }
+                return a; // для использования в нужном месте
+            }
+            document.writeln("Привет! " + document.getElementById('name').value + ' ' + document.getElementById('sname').value + ".  Ваша цель пребывания: " + document.getElementById('Zach').value + ". Опыт инвестирования " + document.querySelector('input[name="skills"]:checked').value + ". Вы знаете языки:" + getCheckedCheckBoxes() + " Начали инвестировать с " + document.querySelector('#select').value + " года.");
+        }
+    </script>
+</body>
+<footer>
+    <hr>
+    © Все права пока не защищены
+</footer>
+
+</html>

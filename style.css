@@ -1,0 +1,91 @@
+p {
+    margin-left: 5%;;
+}
+
+h1 {
+
+    text-align: center;
+    color:	rgb(222, 106, 91);
+}
+h2 {
+
+    text-align: center;
+}
+
+h4 {
+    color:	rgb(222, 106, 91);
+}
+
+body {
+
+    background: #fff;
+    color: #000;
+    font-family: Hauss,Arial,sans-serif;
+    overflow-y: scroll;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    display:block;
+    margin:0 auto;
+}
+
+.developers li {
+  list-style-image: url(img/mark.png);
+}
+
+.menu-main ul { 
+    list-style-type: none; 
+}
+
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+  background: white;
+}
+.menu-main a {
+  color:	rgb(0, 0, 0);
+   border-radius: 20px 5px;
+    background-color: #f3dc0a;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+.menu-main a:hover {
+  border-radius: 20px 5px;
+  background-color: #f3a90a;
+}
+.menu-main li { display: inline; }
+
+table {
+  margin: auto;
+  
+}
+th {
+  border-bottom: 3px solid rgb(235, 227, 226);
+  padding: 10px;
+  text-align: left;
+}
+td {
+  padding: 10px;
+}
+th{
+   background: rgb(235, 227, 226);
+}
+tr:nth-child(odd) {
+  background: #eee4b7dc;
+}
+tr:nth-child(even) {
+  background: #fdd72bdc;
+}
+
+aside {
+    padding: 10px;
+    width: 200px;
+    float: right;
+}
